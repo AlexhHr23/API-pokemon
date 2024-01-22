@@ -1,8 +1,13 @@
 import '../sass/Button.scss';
-const Button = (props) => {
+const Button = ({icon, hadleClick}) => {
   return (
     <div className='button_box'>
-        <button className="button">{props.text}</button>
+        <button 
+            className="button" 
+            onClick={hadleClick}
+            >{icon}
+        </button>
+        <div className="button_shadow"></div>
     </div>
   )
 }
